@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: registry
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: registry
+    spec:
+      containers:
+      - image: registry:2
+        name: registry
+        ports:
+        - name: registry
+          containerPort: 5000
+          hostPort: 5000
