@@ -75,3 +75,5 @@ hs_err_pid*
 ### Personal ###
 
 src/
+
+node_modules/
