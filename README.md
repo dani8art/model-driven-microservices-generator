@@ -10,6 +10,10 @@
 
 `https://github.com/kubernetes/minikube/releases`
 
+#### Run
+
+`minikube start --extra-config=apiserver.GenericServerRunOptions.ServiceNodePortRange=0-30000`
+
 
 ### Install kubectl
 
