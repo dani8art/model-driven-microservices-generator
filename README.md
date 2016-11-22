@@ -10,9 +10,17 @@
 
 `https://github.com/kubernetes/minikube/releases`
 
+or
+
+`https://storage.googleapis.com/minikube-builds/837/minikube-windows-amd64.exe`
+
 #### Run
 
-`minikube start --extra-config=apiserver.GenericServerRunOptions.ServiceNodePortRange=0-30000`
+`minikube config set WantReportErrorPrompt false`
+
+`minikube start --extra-config=apiserver.GenericServerRunOptions.ServiceNodePortRange=1-30000`
+
+`minikube dashboard`
 
 
 ### Install kubectl
