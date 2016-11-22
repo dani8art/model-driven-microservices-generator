@@ -10,7 +10,7 @@ spec:
         name: mongodb
     spec:
       containers:
-      - image: mongo:latest
+      - image: mongo
         name: mongodb
         ports:
         - name: mongodb
