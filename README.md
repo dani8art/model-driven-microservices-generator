@@ -18,7 +18,7 @@ or
 
 `minikube config set WantReportErrorPrompt false`
 
-`minikube start --extra-config=apiserver.GenericServerRunOptions.ServiceNodePortRange=1-30000`
+`minikube start --extra-config=apiserver.ServerRunOptions.ServiceNodePortRange=1-30000`
 
 `minikube dashboard`
 
