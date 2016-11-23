@@ -8,15 +8,13 @@
 
 #### Download
 
-`https://github.com/kubernetes/minikube/releases`
+<!--`https://github.com/kubernetes/minikube/releases`
 
-or
+or-->
 
-`https://storage.googleapis.com/minikube-builds/837/minikube-windows-amd64.exe`
+`https://storage.googleapis.com/minikube-builds/847/minikube-windows-amd64.exe`
 
 #### Run
-
-`minikube config set WantReportErrorPrompt false`
 
 `minikube start --extra-config=apiserver.ServerRunOptions.ServiceNodePortRange=1-30000`
 
