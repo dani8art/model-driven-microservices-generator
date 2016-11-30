@@ -3,6 +3,23 @@
 > This is an academic project in hard develompent phase and may have bugs and don't work correctly.
 > It is intended for qualified beta testers only and must not be used in production systems.
 
+## Collaboration
+
+> Is recomended to download [SourceTree](https://www.sourcetreeapp.com/)
+
+### Clone Repository
+`git clone https://github.com/dani8art/model-driven-microservices-generator.git`
+
+### Create SRC folder
+`mkdir src`
+
+### Import project on Eclipse Epsilon
+`File >> Import >> General >> Existing Projects into Workspace`
+
+`Browse...` the directory.
+
+`Click 'Finish'`
+
 
 ### Install minikube
 
