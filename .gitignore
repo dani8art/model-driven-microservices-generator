@@ -79,3 +79,4 @@ src/
 node_modules/
 .kube/
 *.rar
+npm-debug*
