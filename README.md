@@ -11,7 +11,7 @@
 `git clone https://github.com/dani8art/model-driven-microservices-generator.git`
 
 ### Create SRC folder
-`mkdir src`
+`cd model-driven-microservices-generator & mkdir src`
 
 ### Import project on Eclipse Epsilon
 `File >> Import >> General >> Existing Projects into Workspace`
