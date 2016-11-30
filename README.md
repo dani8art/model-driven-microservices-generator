@@ -29,9 +29,6 @@
 
 or-->
 
-
-
-
 `https://storage.googleapis.com/minikube-builds/847/minikube-windows-amd64.exe`
 
 #### Run
@@ -47,8 +44,8 @@ or-->
 
 `http://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/windows/amd64/kubectl.exe`
 
-## Authors
+## Contact
 
-Jose Antonio Fábregas	erfabs@gmail.com
-Daniel Arteaga			dani8art.da@gmail.com
-Alejandro Ruiz			alejandroruizponce@gmail.com
+- Arteaga, Daniel			(dani8art.da@gmail.com)
+- Fabregas, Jose Antonio 	(erfabs@gmail.com)
+- Ruiz, Alejandro 		    (alejandroruizponce@gmail.com)
