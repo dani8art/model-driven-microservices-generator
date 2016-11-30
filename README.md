@@ -29,6 +29,9 @@
 
 or-->
 
+
+
+
 `https://storage.googleapis.com/minikube-builds/847/minikube-windows-amd64.exe`
 
 #### Run
