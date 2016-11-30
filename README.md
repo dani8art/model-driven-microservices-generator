@@ -21,7 +21,7 @@
 `Click 'Finish'`
 
 
-### Install minikube
+## Install minikube
 
 #### Download
 
@@ -38,7 +38,7 @@ or-->
 `minikube dashboard`
 
 
-### Install kubectl
+## Install kubectl
 
 #### Download
 
