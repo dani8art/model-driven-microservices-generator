@@ -1,0 +1,6 @@
+-- @path MMmicro=/MDMG-model-2-model/metamodels/microservices.ecore
+-- @path MMkube=/MDMG-model-2-model/metamodels/kubernetes.ecore
+
+module micro2kube;
+create OUTkube : MMkube from INmicro : MMmicro;
+
