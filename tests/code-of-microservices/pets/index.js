@@ -20,7 +20,11 @@ baucis.rest('pets');
 var app = express();
 //add cors support
 app.use(cors());
+//add api resources
 app.use('/api', baucis());
+//add UI
+app.use('/', express.static(__dirname + '/public/app/'));
+app.use('/bower_components', express.static(__dirname + '/public/bower_components/'));
 
 var port = config.port;
 

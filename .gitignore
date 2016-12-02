@@ -75,8 +75,9 @@ hs_err_pid*
 ### Personal ###
 
 src/
-
+bower_components/
 node_modules/
 .kube/
 *.rar
 npm-debug*
+data/

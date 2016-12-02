@@ -12,6 +12,7 @@ spec:
       containers:
       - image: darteaga/pets:sma-example01
         name: pets-service
+        imagePullPolicy: Always
         ports:
         - name: pets-service
           containerPort: 80
