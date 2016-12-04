@@ -1,19 +1,18 @@
 # Model Driven Microservices Generator MDMG
 
-The idea of this project borns from the problem of kubernetize (deploy apps
-on kubernetes) microservice applications. Main problem of kubernetize apps is
-create or define the files which are necessary to deploy apps on kubernetes,
-becouse its are normaly a lots and sometime the concepts and the configuration
-that are reflected on these files is out of our knowledge.
+The idea of this project borns from the problem of *"kubernetize"* (deploy apps
+on kubernetes) microservice applications. The Main problem of kubernetizing apps is
+to define the files which are necessary to deploy apps on kubernetes
+becouse it are normaly a lots as well as the concepts and the configuration,
+that are reflected on these files, is sometimes out of our knowledge.
 
 On this project we will use the Model-driven software engineering for abstracting the
-problem to a easier model that permits to describe apps, and after, we will generate
-all necessary files.  
+problem to a easier model that will permit us to describe apps, and after, we will generate
+all files and configurations necessary.  
 
-In this documentation you can find concepts, meta-models, models, etc which are been
-uses for developing the tool.
+In this documentation we describe concepts which have been used for developing the tool.
 
 ## Table of contents
 
-1. [Meta-model 01: Microservices](./meta01-microservices.md)
-2. [Meta-model 02: Kubernetes](./meta02-kubernetes.md)
+1. [Metamodel 01: Microservices](./meta01-microservices.md)
+2. [Metamodel 02: Kubernetes](./meta02-kubernetes.md)

@@ -10,12 +10,12 @@ and its connections. We will suppose we have ours apps in docker containers.
 
 ![metamodel 01: microservices](./images/metamodel01-microservice-v2.png)
 
-There are five important class on this metamodel `Application`, `Microservice`, `Connection`, `Group` and `ConnectionType`.
+There are five important classes on this metamodel `Application`, `Microservice`, `Connection`, `Group` and `ConnectionType`.
 
 ### Application
 This class is the root of metamodel.
 
-###### Restrictions
+##### Restrictions
 
 1. Can't there are two microservices with same name.
 2. Can't there are two microservices with same port.
@@ -32,7 +32,7 @@ port | `integer` | **Optional**. The port where the component will be exposed. I
 image | `string` | **Required**. The identifier of docker image that contains the component.
 imagePort | `integer` | **Required**. The port which is defined in docker image for exposing the component.
 
-###### Restrictions
+##### Restrictions
 
 1. If there aren't port, it will be equal to imagePort.
 2. One microservice can't have two connection with type EXTERNAL.
@@ -45,7 +45,7 @@ Property | Type | Description
 ------------ | ------------- | ----------
 name        | `string` | **Required**. Name of the group.
 
-###### Restrictions
+##### Restrictions
 
 1. Two groups have not the same name
 
@@ -59,7 +59,7 @@ Property | Type | Description
 ------------ | ------------- | ----------
 type        | `ConnectionType` | **Required**. Type of connection.
 
-###### Restrictions
+##### Restrictions
 
 1. If type is EXTERNAL can't have relation "to".
 
