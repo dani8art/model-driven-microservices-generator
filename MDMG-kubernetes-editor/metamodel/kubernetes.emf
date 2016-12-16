@@ -1,0 +1,85 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@namespace(uri="http://cloud.kubernetes", prefix="cloud")
+package kubernetes;
+
+@gmf.node(label="name", label.icon="false", figure="ellipse", tool.name="Service", tool.description="service")
+class Service {
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Deployment[1] deployments;
+  attr String[1] name;
+  attr int port;
+  attr int targetPort;
+  attr ServiceType type;
+}
+
+@gmf.node(label="replies", label.icon="false", figure="rectangle", tool.name="Deployment", tool.description="deployment icon")
+@Ecore(constraints="RepliesNumber sameNameLabels sameContainerName sameContainerPort")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(RepliesNumber="
+			replies>0", sameNameLabels="
+			labels -> isUnique(key)", sameContainerName="
+			containers -> isUnique(name)", sameContainerPort="
+			containers -> isUnique(containerPort)")
+class Deployment {
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Container[*] containers;
+  attr int replies;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Label[+] labels;
+}
+
+@gmf.node(label="name", label.icon="false", figure="polygon", polygon.x="0 10 10 0", polygon.y="0 0 40 40", size="10,40", tool.name="Container", tool.description="container")
+@Ecore(constraints="sameNameEnvironment")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(sameNameEnvironment="
+			environments -> isUnique(name)")
+class Container {
+  attr String name;
+  attr String image;
+  attr int containerPort;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Environment[*] environments;
+}
+
+@gmf.node(label="key", label.icon="false", figure="polygon", polygon.x="0 40 40 10", polygon.y="0 0 10 10", size="40,10", tool.name="Label", tool.description="label")
+class Label {
+  attr String key;
+  attr String value;
+}
+
+@gmf.diagram
+@Ecore(constraints="sameServiceName sameServicePort cloudLocal")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(sameServiceName="
+			services -> isUnique(name)", sameServicePort="
+			services -> isUnique(port)", cloudLocal="
+			cloud = CloudType::LOCAL implies services -> forAll (s:Service | s.type<>ServiceType::LoadBalancer)")
+class Kubernetes {
+  val Service[*] services;
+  attr CloudType cloud;
+  val Deployment[*] deps;
+  val Container[*] conts;
+  val Environment[*] envs;
+  val Label[*] labs;
+}
+
+enum ServiceType {
+  NodePort = 0;
+  LoadBalancer = 0;
+  ClusterIP = 0;
+}
+
+@gmf.node(label="name", label.icon="false", figure="polygon", polygon.x="20 40 20 0", polygon.y=" 0 20 40 20", tool.name="Environment", tool.description="environment")
+class Environment {
+  attr String name;
+  attr String value;
+}
+
+enum CloudType {
+  LOCAL = 0;
+  AWS = 0;
+  GCE = 0;
+}
+

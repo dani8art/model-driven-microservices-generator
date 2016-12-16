@@ -1,0 +1,7 @@
+# Tracing options for the MDMG-kubernetes-editor.diagram plug-in
+
+# Common issues
+MDMG-kubernetes-editor.diagram/debug=false
+
+# Visual IDs
+MDMG-kubernetes-editor.diagram/debug/visualID=false

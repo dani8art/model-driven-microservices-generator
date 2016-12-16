@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="kubernetes">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ServiceDeploymentsFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="DeploymentContainersFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="DeploymentLabelsFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ContainerEnvironmentsFigureTargetDecoration"/>
+    <descriptors name="ServiceFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="ServiceFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ServiceLabelFigure" text="Service"/>
+      </actualFigure>
+      <accessors accessor="getFigureServiceLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="DeploymentFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DeploymentFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DeploymentLabelFigure" text="Deployment"/>
+      </actualFigure>
+      <accessors accessor="getFigureDeploymentLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ContainerFigure">
+      <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="ContainerFigure">
+        <preferredSize dx="10" dy="40"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ContainerLabelFigure" text="Container"/>
+        <template/>
+        <template x="10"/>
+        <template x="10" y="40"/>
+        <template y="40"/>
+      </actualFigure>
+      <accessors accessor="getFigureContainerLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LabelFigure">
+      <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="LabelFigure">
+        <preferredSize dx="40" dy="10"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="LabelLabelFigure" text="Label"/>
+        <template/>
+        <template x="40"/>
+        <template x="40" y="10"/>
+        <template x="10" y="10"/>
+      </actualFigure>
+      <accessors accessor="getFigureLabelLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EnvironmentFigure">
+      <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="EnvironmentFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EnvironmentLabelFigure" text="Environment"/>
+        <template x="20"/>
+        <template x="40" y="20"/>
+        <template x="20" y="40"/>
+        <template y="20"/>
+      </actualFigure>
+      <accessors accessor="getFigureEnvironmentLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ServiceDeploymentsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ServiceDeploymentsFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="ServiceDeploymentsExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ServiceDeploymentsExternalLabel"/>
+    </descriptors>
+    <descriptors name="DeploymentContainersFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="DeploymentContainersFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="DeploymentContainersExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="DeploymentContainersExternalLabel"/>
+    </descriptors>
+    <descriptors name="DeploymentLabelsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="DeploymentLabelsFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="DeploymentLabelsExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="DeploymentLabelsExternalLabel"/>
+    </descriptors>
+    <descriptors name="ContainerEnvironmentsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ContainerEnvironmentsFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.3"/>
+    </descriptors>
+    <descriptors name="ContainerEnvironmentsExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ContainerEnvironmentsExternalLabel"/>
+    </descriptors>
+  </figures>
+  <nodes name="Service" figure="ServiceFigure"/>
+  <nodes name="Deployment" figure="DeploymentFigure"/>
+  <nodes name="Container" figure="ContainerFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="10" dy="40"/>
+    </facets>
+  </nodes>
+  <nodes name="Label" figure="LabelFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="40" dy="10"/>
+    </facets>
+  </nodes>
+  <nodes name="Environment" figure="EnvironmentFigure"/>
+  <connections name="ServiceDeployments" figure="ServiceDeploymentsFigure"/>
+  <connections name="DeploymentContainers" figure="DeploymentContainersFigure"/>
+  <connections name="DeploymentLabels" figure="DeploymentLabelsFigure"/>
+  <connections name="ContainerEnvironments" figure="ContainerEnvironmentsFigure"/>
+  <labels name="ServiceLabel" figure="ServiceFigure" elementIcon="false" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="DeploymentLabel" figure="DeploymentFigure" elementIcon="false" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="ContainerLabel" figure="ContainerFigure" elementIcon="false" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="LabelLabel" figure="LabelFigure" elementIcon="false" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="EnvironmentLabel" figure="EnvironmentFigure" elementIcon="false" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="ServiceDeploymentsExternalLabel" figure="ServiceDeploymentsExternalLabelFigure" elementIcon="false"/>
+  <labels name="DeploymentContainersExternalLabel" figure="DeploymentContainersExternalLabelFigure" elementIcon="false"/>
+  <labels name="DeploymentLabelsExternalLabel" figure="DeploymentLabelsExternalLabelFigure" elementIcon="false"/>
+  <labels name="ContainerEnvironmentsExternalLabel" figure="ContainerEnvironmentsExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

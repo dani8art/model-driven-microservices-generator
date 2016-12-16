@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/MDMG-kubernetes-editor/src" modelPluginID="MDMG-kubernetes-editor"
+    modelName="Kubernetes" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>kubernetes.emf</foreignModel>
+  <genPackages prefix="Kubernetes" disposableProviderFactory="true" ecorePackage="kubernetes.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="kubernetes.ecore#//ServiceType">
+      <genEnumLiterals ecoreEnumLiteral="kubernetes.ecore#//ServiceType/NodePort"/>
+      <genEnumLiterals ecoreEnumLiteral="kubernetes.ecore#//ServiceType/LoadBalancer"/>
+      <genEnumLiterals ecoreEnumLiteral="kubernetes.ecore#//ServiceType/ClusterIP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="kubernetes.ecore#//CloudType">
+      <genEnumLiterals ecoreEnumLiteral="kubernetes.ecore#//CloudType/LOCAL"/>
+      <genEnumLiterals ecoreEnumLiteral="kubernetes.ecore#//CloudType/AWS"/>
+      <genEnumLiterals ecoreEnumLiteral="kubernetes.ecore#//CloudType/GCE"/>
+    </genEnums>
+    <genClasses ecoreClass="kubernetes.ecore#//Service">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Service/deployments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Service/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Service/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Service/targetPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Service/type"/>
+    </genClasses>
+    <genClasses ecoreClass="kubernetes.ecore#//Deployment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Deployment/containers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Deployment/replies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Deployment/labels"/>
+    </genClasses>
+    <genClasses ecoreClass="kubernetes.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Container/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Container/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Container/containerPort"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Container/environments"/>
+    </genClasses>
+    <genClasses ecoreClass="kubernetes.ecore#//Label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Label/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Label/value"/>
+    </genClasses>
+    <genClasses ecoreClass="kubernetes.ecore#//Kubernetes">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Kubernetes/services"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Kubernetes/cloud"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Kubernetes/deps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Kubernetes/conts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Kubernetes/envs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kubernetes.ecore#//Kubernetes/labs"/>
+    </genClasses>
+    <genClasses ecoreClass="kubernetes.ecore#//Environment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Environment/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kubernetes.ecore#//Environment/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
