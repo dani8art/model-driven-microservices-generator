@@ -83,3 +83,4 @@ node_modules/
 npm-debug*
 data/
 MDMG-kubernetes-editor.diagram/
+MDMG-microservices-editor.diagram/
