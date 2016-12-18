@@ -16,7 +16,9 @@ In this documentation we describe concepts which have been used for developing t
 
 1. **METAMODELS**
   - [Metamodel 01: Microservices](./meta01-microservices.md)
+    - [Editor 01](./microservices-editor.md)
   - [Metamodel 02: Kubernetes](./meta02-kubernetes.md)
+    - [Editor 02](./kubernetes-editor.md)
 2. **TRANSFOMATIONS**
   - [Transformation 01: Model to Model]()
   - [Transformation 02: Model to Text]()

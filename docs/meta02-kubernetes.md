@@ -7,8 +7,7 @@ generating all files necessary.
 
 **Samples of intances**
 
-- [Example 01: Pets](./images/example01-pets-kube.png)
-- [Example 02: >name<](./images/example01-pets-kube.png)
+- [Example 01: Pets](./images/kubernetes-editor/kubernetes-editor-example.png)
 
 ![metamodel 02: kubernetes](./images/metamodel02-kubernetes-v2.png)
 

@@ -5,8 +5,7 @@ and its connections. We will suppose we have ours apps in docker containers.
 
 **Samples of intances**
 
-- [Example 01: Pets](./images/example01-pets.png)
-- [Example 02: >name<](./images/example01-pets.png)
+- [Example 01: Pets](./images/microservices-editor/microservice-editor-example.png)
 
 ![metamodel 01: microservices](./images/metamodel01-microservice-v2.png)
 
