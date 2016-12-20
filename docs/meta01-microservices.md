@@ -3,6 +3,8 @@
 The main objective of this metamodel is to give a easier way for describing a microservice
 and its connections. We will suppose we have ours apps in docker containers.
 
+**You can build or edit instances of this model with [Editor 01](./microservices-editor.md)**
+
 **Samples of intances**
 
 - [Example 01: Pets](./images/microservices-editor/microservice-editor-example.png)
