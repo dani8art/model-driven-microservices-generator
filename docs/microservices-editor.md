@@ -8,7 +8,7 @@ This editor is composed of the following components:
 
 ### Microservice
 
-This component represents the concept microservice which is defined in [here](./meta01-microservices.md#microservice). It is possible to see three microservice: pets, nginx and accounts, in the example that is showing above.
+This component represents the concept of microservice which is defined in [here](./meta01-microservices.md#microservice). It is possible to see three microservice: pets, nginx and accounts, in the example that is showing above.
 
 ![Microservice on editor](./images/microservices-editor/microservice.png)
 
