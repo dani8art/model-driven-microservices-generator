@@ -49,7 +49,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_LUhoG8OsEeaipZmYRsEixw"/>
     </children>
     <element xmi:type="ecore:EClass" href="kubernetes.ecore#//Container"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LUhoEcOsEeaipZmYRsEixw" y="425"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LUhoEcOsEeaipZmYRsEixw" x="-5" y="440"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_LUhoHMOsEeaipZmYRsEixw" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_LUhoHsOsEeaipZmYRsEixw" type="5001"/>
@@ -168,19 +168,6 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LVvwE8OsEeaipZmYRsEixw" id="(0.5,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LVvwFMOsEeaipZmYRsEixw" id="(0.494949494949495,0.0)"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_LVDMgMOsEeaipZmYRsEixw" type="4002" source="_LUhBCsOsEeaipZmYRsEixw" target="_LUhoEMOsEeaipZmYRsEixw">
-    <children xmi:type="notation:DecorationNode" xmi:id="_LVDMg8OsEeaipZmYRsEixw" type="6001">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_LVDMhMOsEeaipZmYRsEixw" x="-50" y="-25"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_LVDMhcOsEeaipZmYRsEixw" type="6003">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_LVDMhsOsEeaipZmYRsEixw" x="22" y="14"/>
-    </children>
-    <styles xmi:type="notation:FontStyle" xmi:id="_LVDMgcOsEeaipZmYRsEixw" fontName="Segoe UI"/>
-    <element xmi:type="ecore:EReference" href="kubernetes.ecore#//Deployment/containers"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LVDMgsOsEeaipZmYRsEixw" points="[0, 0, 69, -60]$[-69, 60, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LVvwEcOsEeaipZmYRsEixw" id="(0.3333333333333333,1.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LVvwEsOsEeaipZmYRsEixw" id="(0.5,0.0)"/>
-  </edges>
   <edges xmi:type="notation:Connector" xmi:id="_LVEaoMOsEeaipZmYRsEixw" type="4002" source="_LUhBCsOsEeaipZmYRsEixw" target="_LUhoHMOsEeaipZmYRsEixw">
     <children xmi:type="notation:DecorationNode" xmi:id="_LVEao8OsEeaipZmYRsEixw" type="6001">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_LVFBsMOsEeaipZmYRsEixw" x="27" y="-17"/>
@@ -269,5 +256,18 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6xhTUsOsEeaipZmYRsEixw" points="[28, 0, -44, -428]$[72, 0, 0, -428]$[72, 393, 0, -35]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6xjvkMOsEeaipZmYRsEixw" id="(0.7777777777777778,0.5423728813559322)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6xjvkcOsEeaipZmYRsEixw" id="(0.9423076923076923,0.4666666666666667)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_9N67wMh3EeaTrP23Yabfnw" type="4003" source="_LUhBCsOsEeaipZmYRsEixw" target="_LUhoEMOsEeaipZmYRsEixw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_9N7i0Mh3EeaTrP23Yabfnw" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9N7i0ch3EeaTrP23Yabfnw" x="46" y="49"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_9N7i0sh3EeaTrP23Yabfnw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9N7i08h3EeaTrP23Yabfnw" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9N67wch3EeaTrP23Yabfnw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="kubernetes.ecore#//Deployment/containers"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9N67wsh3EeaTrP23Yabfnw" points="[-14, 11, 49, -39]$[-52, 32, 11, -18]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9OAbUMh3EeaTrP23Yabfnw" id="(0.4950166112956811,0.8877551020408163)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9OAbUch3EeaTrP23Yabfnw" id="(0.5980066445182725,0.13846153846153847)"/>
   </edges>
 </notation:Diagram>

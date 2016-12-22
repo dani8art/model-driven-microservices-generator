@@ -3,7 +3,7 @@
 @namespace(uri="http://cloud.kubernetes", prefix="cloud")
 package kubernetes;
 
-@gmf.node(label="name", label.icon="false", figure="ellipse", tool.name="Service", tool.description="service")
+@gmf.node(label="name", label.pattern="SERVICE:{0}", label.icon="false", label.placement="external", svg.uri="platform:/plugin/MDMG-kubernetes-editor/icons/service.svg", figure="svg", tool.name="Service", tool.description="service")
 class Service {
 
   @gmf.link(target.decoration="arrow", style="dash")
@@ -14,7 +14,7 @@ class Service {
   attr ServiceType type;
 }
 
-@gmf.node(label="replies", label.icon="false", figure="rectangle", tool.name="Deployment", tool.description="deployment icon")
+@gmf.node(label="replies", label.icon="false", label.pattern="DEPLOYMENT:{0}", figure="rounded", tool.name="Deployment", tool.description="deployment icon")
 @Ecore(constraints="RepliesNumber sameNameLabels sameContainerName sameContainerPort")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(RepliesNumber="
 			replies>0", sameNameLabels="
@@ -22,16 +22,16 @@ class Service {
 			containers -> isUnique(name)", sameContainerPort="
 			containers -> isUnique(containerPort)")
 class Deployment {
-
-  @gmf.link(target.decoration="arrow", style="dash")
-  ref Container[*] containers;
   attr int replies;
 
   @gmf.link(target.decoration="arrow", style="dash")
   ref Label[+] labels;
+
+  @gmf.compartment(collapsible="false")
+  val Container[*] containers;
 }
 
-@gmf.node(label="name", label.icon="false", figure="polygon", polygon.x="0 10 10 0", polygon.y="0 0 40 40", size="10,40", tool.name="Container", tool.description="container")
+@gmf.node(label="name", label.icon="false",  label.pattern="CONTAINER:{0}",  label.placement="external", svg.uri="platform:/plugin/MDMG-kubernetes-editor/icons/container.svg", figure="svg", tool.name="Container", tool.description="container")
 @Ecore(constraints="sameNameEnvironment")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(sameNameEnvironment="
 			environments -> isUnique(name)")
@@ -44,7 +44,7 @@ class Container {
   ref Environment[*] environments;
 }
 
-@gmf.node(label="key", label.icon="false", figure="polygon", polygon.x="0 40 40 10", polygon.y="0 0 10 10", size="40,10", tool.name="Label", tool.description="label")
+@gmf.node(label="key,value", label.icon="false", label.pattern="{0}:{1}", label.placement="external", svg.uri="platform:/plugin/MDMG-kubernetes-editor/icons/label.svg", figure="svg", tool.name="Label", tool.description="label")
 class Label {
   attr String key;
   attr String value;
@@ -71,7 +71,7 @@ enum ServiceType {
   ClusterIP = 0;
 }
 
-@gmf.node(label="name", label.icon="false", figure="polygon", polygon.x="20 40 20 0", polygon.y=" 0 20 40 20", tool.name="Environment", tool.description="environment")
+@gmf.node(label="name,value", label.icon="false", figure="svg", label.pattern="{0}:{1}", label.placement="external", svg.uri="platform:/plugin/MDMG-kubernetes-editor/icons/environment-var.svg", tool.name="Environment", tool.description="environment")
 class Environment {
   attr String name;
   attr String value;

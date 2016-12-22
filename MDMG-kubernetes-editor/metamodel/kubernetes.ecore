@@ -12,8 +12,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Service">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
+      <details key="label.pattern" value="SERVICE:{0}"/>
       <details key="label.icon" value="false"/>
-      <details key="figure" value="ellipse"/>
+      <details key="label.placement" value="external"/>
+      <details key="svg.uri" value="platform:/plugin/MDMG-kubernetes-editor/icons/service.svg"/>
+      <details key="figure" value="svg"/>
       <details key="tool.name" value="Service"/>
       <details key="tool.description" value="service"/>
     </eAnnotations>
@@ -33,7 +36,8 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="replies"/>
       <details key="label.icon" value="false"/>
-      <details key="figure" value="rectangle"/>
+      <details key="label.pattern" value="DEPLOYMENT:{0}"/>
+      <details key="figure" value="rounded"/>
       <details key="tool.name" value="Deployment"/>
       <details key="tool.description" value="deployment icon"/>
     </eAnnotations>
@@ -46,13 +50,6 @@
       <details key="sameContainerName" value="&#xA;&#x9;&#x9;&#x9;containers -> isUnique(name)"/>
       <details key="sameContainerPort" value="&#xA;&#x9;&#x9;&#x9;containers -> isUnique(containerPort)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
-        eType="#//Container">
-      <eAnnotations source="gmf.link">
-        <details key="target.decoration" value="arrow"/>
-        <details key="style" value="dash"/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="replies" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="labels" lowerBound="1"
         upperBound="-1" eType="#//Label">
@@ -61,15 +58,21 @@
         <details key="style" value="dash"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
+        eType="#//Container" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="collapsible" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Container">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
       <details key="label.icon" value="false"/>
-      <details key="figure" value="polygon"/>
-      <details key="polygon.x" value="0 10 10 0"/>
-      <details key="polygon.y" value="0 0 40 40"/>
-      <details key="size" value="10,40"/>
+      <details key="label.pattern" value="CONTAINER:{0}"/>
+      <details key="label.placement" value="external"/>
+      <details key="svg.uri" value="platform:/plugin/MDMG-kubernetes-editor/icons/container.svg"/>
+      <details key="figure" value="svg"/>
       <details key="tool.name" value="Container"/>
       <details key="tool.description" value="container"/>
     </eAnnotations>
@@ -92,12 +95,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Label">
     <eAnnotations source="gmf.node">
-      <details key="label" value="key"/>
+      <details key="label" value="key,value"/>
       <details key="label.icon" value="false"/>
-      <details key="figure" value="polygon"/>
-      <details key="polygon.x" value="0 40 40 10"/>
-      <details key="polygon.y" value="0 0 10 10"/>
-      <details key="size" value="40,10"/>
+      <details key="label.pattern" value="{0}:{1}"/>
+      <details key="label.placement" value="external"/>
+      <details key="svg.uri" value="platform:/plugin/MDMG-kubernetes-editor/icons/label.svg"/>
+      <details key="figure" value="svg"/>
       <details key="tool.name" value="Label"/>
       <details key="tool.description" value="label"/>
     </eAnnotations>
@@ -133,11 +136,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Environment">
     <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="label" value="name,value"/>
       <details key="label.icon" value="false"/>
-      <details key="figure" value="polygon"/>
-      <details key="polygon.x" value="20 40 20 0"/>
-      <details key="polygon.y" value=" 0 20 40 20"/>
+      <details key="figure" value="svg"/>
+      <details key="label.pattern" value="{0}:{1}"/>
+      <details key="label.placement" value="external"/>
+      <details key="svg.uri" value="platform:/plugin/MDMG-kubernetes-editor/icons/environment-var.svg"/>
       <details key="tool.name" value="Environment"/>
       <details key="tool.description" value="environment"/>
     </eAnnotations>
