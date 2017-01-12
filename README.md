@@ -3,6 +3,10 @@
 > This is an academic project in hard develompent phase and may have bugs and don't work correctly.
 > It is intended for qualified beta testers only and must not be used in production systems.
 
+## Documentation
+
+Go to the project documentation [here](./docs/README.md).
+
 ## Repository structure
 
 This project is divided in four sub-project, each project has a different objectives which are describe follow:
