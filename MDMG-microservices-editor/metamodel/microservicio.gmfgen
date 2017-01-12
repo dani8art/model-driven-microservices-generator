@@ -163,11 +163,11 @@
         <entries xsi:type="gmfgen:ToolEntry" title="To" description="Create new To" genLinks="//@diagram/@links.4"/>
       </groups>
     </palette>
-    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="MetaServicio.diagram.general" name="Microservicio Diagram">
-      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MetaServicio.diagram.appearance" name="Appearance" kind="Appearance"/>
-      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MetaServicio.diagram.connections" name="Connections" kind="Connections"/>
-      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MetaServicio.diagram.printing" name="Printing" kind="Printing"/>
-      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MetaServicio.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="MDMG-microservices-editor.diagram.general" name="Microservicio Diagram">
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MDMG-microservices-editor.diagram.appearance" name="Appearance" kind="Appearance"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MDMG-microservices-editor.diagram.connections" name="Connections" kind="Connections"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MDMG-microservices-editor.diagram.printing" name="Printing" kind="Printing"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MDMG-microservices-editor.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
     </preferencePages>
   </diagram>
   <plugin printingEnabled="true">

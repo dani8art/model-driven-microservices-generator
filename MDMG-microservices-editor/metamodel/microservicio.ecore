@@ -15,9 +15,9 @@
       <details key="constraints" value="sameName samePort emptyPort"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="sameName" value="&#xA;&#x9;&#x9;&#x9;self.microservices->isUnique(m:Microservice | m.name)"/>
-      <details key="samePort" value="&#xA;&#x9;&#x9;&#x9;self.microservices->isUnique(m:Microservice | m.port)"/>
-      <details key="emptyPort" value="&#xA;&#x9;&#x9;&#x9;self.microservices->forAll(m:Microservice | m.port = 0) implies self.microservices.port = self.microservices.imagePort"/>
+      <details key="sameName" value="&#xD;&#xA;&#x9;&#x9;&#x9;self.microservices->isUnique(m:Microservice | m.name)"/>
+      <details key="samePort" value="&#xD;&#xA;&#x9;&#x9;&#x9;self.microservices->isUnique(m:Microservice | m.port)"/>
+      <details key="emptyPort" value="&#xD;&#xA;&#x9;&#x9;&#x9;self.microservices->forAll(m:Microservice | m.port = 0) implies self.microservices.port = self.microservices.imagePort"/>
     </eAnnotations>
     <eAnnotations source="gmf.diagram"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="microservices" lowerBound="1"
@@ -32,8 +32,8 @@
       <details key="constraints" value="sameName dosExternal"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="sameName" value="&#xA;&#x9;&#x9;&#x9;self.group->isUnique(g:Group | g.name)"/>
-      <details key="dosExternal" value="&#xA;&#x9;&#x9;&#x9;self.to ->select(type = ConnectionType::EXTERNAL)->size()&lt;3"/>
+      <details key="sameName" value="&#xD;&#xA;&#x9;&#x9;&#x9;self.group->isUnique(g:Group | g.name)"/>
+      <details key="dosExternal" value="&#xD;&#xA;&#x9;&#x9;&#x9;self.to ->select(type = ConnectionType::EXTERNAL)->size()&lt;3"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
@@ -70,7 +70,7 @@
       <details key="constraints" value="external"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="external" value="&#xA;&#x9;&#x9;&#x9;type = ConnectionType::EXTERNAL implies to->isEmpty()"/>
+      <details key="external" value="&#xD;&#xA;&#x9;&#x9;&#x9;type = ConnectionType::EXTERNAL implies to->isEmpty()"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="type"/>
