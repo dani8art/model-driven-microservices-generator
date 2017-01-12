@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>MDMG-microservices-editor</name>
+	<name>MetaServicio</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -25,5 +25,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
 	</natures>
-
 </projectDescription>

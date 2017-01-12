@@ -1,0 +1,66 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@gmf
+@namespace(uri="http://Microservicio", prefix="Microservicio")
+package Microservicio;
+
+@Ecore(constraints="sameName samePort emptyPort")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(sameName="
+			self.microservices->isUnique(m:Microservice | m.name)", samePort="
+			self.microservices->isUnique(m:Microservice | m.port)", emptyPort="
+			self.microservices->forAll(m:Microservice | m.port = 0) implies self.microservices.port = self.microservices.imagePort")
+@gmf.diagram
+class Application {
+  val Microservice[+] microservices;
+  val Group[*] groups;
+  val Connection[*] connections;
+}
+
+@Ecore(constraints="sameName dosExternal")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(sameName="
+			self.group->isUnique(g:Group | g.name)", dosExternal="
+			self.to ->select(type = ConnectionType::EXTERNAL)->size()<3")
+@gmf.node(label="name", label.icon="false", figure="rectangle", tool.description="Microservice")
+class Microservice {
+  attr String name;
+  attr int port;
+  attr String image;
+  attr int imagePort;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Group group;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Connection[+] from;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Connection[*] to;
+}
+
+@Ecore(constraints="external")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(external="
+			type = ConnectionType::EXTERNAL implies to->isEmpty()")
+@gmf.node(label="type", label.icon="false", figure="rectangle", tool.description="Connection")
+class Connection {
+  attr ConnectionType type;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Microservice[1] from;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Microservice to;
+}
+
+enum ConnectionType {
+  INTERNAL = 0;
+  EXTERNAL = 0;
+}
+
+@gmf.node(label="name", label.icon="false", figure="rectangle", tool.description="Group")
+class Group {
+  attr String name;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref Microservice[*] group;
+}
+
