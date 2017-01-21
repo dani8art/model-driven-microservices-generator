@@ -1,0 +1,49 @@
+«IMPORT kubernetes»
+
+«DEFINE main FOR kubernetes::Kubernetes»
+«EXPAND deploymentFileTemplate FOREACH services»
+«EXPAND createFiles FOREACH services»
+«ENDDEFINE»
+
+«DEFINE createFiles FOR Service»
+«FILE this.name+'/create-'+this.name+".bat"»
+kubectl create -f ./«this.name»/«this.name»-deployment.yaml
+kubectl create -f ./«this.name»/«this.name»-service.yaml
+«ENDFILE»
+
+«FILE this.name+'/create-'+this.name+".sh"»
+#! /bin/bash
+kubectl create -f ./«this.name»/«this.name»-deployment.yaml
+kubectl create -f ./«this.name»/«this.name»-service.yaml
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE deploymentFileTemplate FOR Service»
+«FILE this.name+'/'+this.name+"-deployment.yaml"»apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: «this.name»
+spec:
+  replicas: 1
+  template: 
+    metadata:
+      labels:
+        «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»name: «lab.key»«ENDFOREACH»
+    spec:
+      «IF this.deployment.containers.size!=0»containers:
+      «FOREACH this.deployment.containers AS cont SEPARATOR '\n'»- image: «cont.image»
+        name: «cont.name»
+        imagePullPolicy: Always
+        ports:
+        - name: «cont.name»
+          containerPort: «cont.containerPort»
+      	«IF cont.environments.size!=0»env:
+      	«FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
+          value: «env.value»
+          «ENDFOREACH»
+   		  «ENDIF»
+      «ENDFOREACH»
+      «ENDIF»        
+«ENDFILE»
+«ENDDEFINE»
+
