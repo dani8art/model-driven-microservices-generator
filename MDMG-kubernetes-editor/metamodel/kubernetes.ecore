@@ -20,7 +20,7 @@
       <details key="tool.name" value="Service"/>
       <details key="tool.description" value="service"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="deployments" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deployment" lowerBound="1"
         eType="#//Deployment">
       <eAnnotations source="gmf.link">
         <details key="target.decoration" value="arrow"/>
@@ -34,7 +34,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Deployment">
     <eAnnotations source="gmf.node">
-      <details key="label" value="replies"/>
+      <details key="label" value="replicas"/>
       <details key="label.icon" value="false"/>
       <details key="label.pattern" value="DEPLOYMENT:{0}"/>
       <details key="figure" value="rounded"/>
@@ -42,15 +42,15 @@
       <details key="tool.description" value="deployment icon"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="RepliesNumber sameNameLabels sameContainerName sameContainerPort"/>
+      <details key="constraints" value="ReplicasNumber sameNameLabels sameContainerName sameContainerPort"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="RepliesNumber" value="&#xA;&#x9;&#x9;&#x9;replies>0"/>
+      <details key="ReplicasNumber" value="&#xA;&#x9;&#x9;&#x9;replicas>0"/>
       <details key="sameNameLabels" value="&#xA;&#x9;&#x9;&#x9;labels -> isUnique(key)"/>
       <details key="sameContainerName" value="&#xA;&#x9;&#x9;&#x9;containers -> isUnique(name)"/>
       <details key="sameContainerPort" value="&#xA;&#x9;&#x9;&#x9;containers -> isUnique(containerPort)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="replies" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="replicas" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="labels" lowerBound="1"
         upperBound="-1" eType="#//Label">
       <eAnnotations source="gmf.link">
@@ -122,12 +122,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloud" eType="#//CloudType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deps" upperBound="-1" eType="#//Deployment"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conts" upperBound="-1"
-        eType="#//Container" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="envs" upperBound="-1" eType="#//Environment"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="labs" upperBound="-1" eType="#//Label"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ServiceType">
     <eLiterals name="NodePort"/>

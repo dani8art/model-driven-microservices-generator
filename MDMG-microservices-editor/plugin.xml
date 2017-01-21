@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated microservicio -->
+      <!-- @generated microservices -->
       <package
-            uri="http://Microservicio"
-            class="Microservicio.MicroservicioPackage"/>
+            uri="http://cloud.microservices"
+            class="microservices.MicroservicesPackage"/>
    </extension>
 
 </plugin>

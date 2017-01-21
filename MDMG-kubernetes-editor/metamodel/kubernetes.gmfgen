@@ -7,7 +7,7 @@
     <containsShortcutsTo>kubernetes</containsShortcutsTo>
     <shortcutsProvidedFor>kubernetes</shortcutsProvidedFor>
     <domainDiagramElement href="kubernetes.genmodel#//kubernetes/Kubernetes"/>
-    <childNodes visualID="3001" editPartClassName="Container2EditPart" itemSemanticEditPolicyClassName="Container2ItemSemanticEditPolicy" canonicalEditPolicyClassName="Container2CanonicalEditPolicy" graphicalNodeEditPolicyClassName="Container2GraphicalNodeEditPolicy" createCommandClassName="Container2CreateCommand" containers="//@diagram/@compartments.0">
+    <childNodes visualID="3001" editPartClassName="ContainerEditPart" itemSemanticEditPolicyClassName="ContainerItemSemanticEditPolicy" canonicalEditPolicyClassName="ContainerCanonicalEditPolicy" graphicalNodeEditPolicyClassName="ContainerGraphicalNodeEditPolicy" createCommandClassName="ContainerCreateCommand" containers="//@diagram/@compartments.0">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ContainerEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ContainerFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainerFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainerFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/MDMG-kubernetes-editor/icons/container.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
@@ -16,7 +16,7 @@
         <containmentMetaFeature href="kubernetes.genmodel#//kubernetes/Deployment/containers"/>
         <childMetaFeature href="kubernetes.genmodel#//kubernetes/Deployment/containers"/>
       </modelFacet>
-      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5002" editPartClassName="ContainerName2EditPart" itemSemanticEditPolicyClassName="ContainerName2ItemSemanticEditPolicy">
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5002" editPartClassName="ContainerNameEditPart" itemSemanticEditPolicyClassName="ContainerNameItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ContainerLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainerLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainerLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Container&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="CONTAINER:{0}" editorPattern="CONTAINER:{0}" editPattern="CONTAINER:{0}">
@@ -51,32 +51,15 @@
         <containmentMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/deps"/>
         <childMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/deps"/>
       </modelFacet>
-      <labels visualID="5003" editPartClassName="DeploymentRepliesEditPart" itemSemanticEditPolicyClassName="DeploymentRepliesItemSemanticEditPolicy">
+      <labels visualID="5003" editPartClassName="DeploymentReplicasEditPart" itemSemanticEditPolicyClassName="DeploymentReplicasItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDeploymentLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="DEPLOYMENT:{0}" editorPattern="DEPLOYMENT:{0}" editPattern="DEPLOYMENT:{0}">
-          <metaFeatures href="kubernetes.genmodel#//kubernetes/Deployment/replies"/>
+          <metaFeatures href="kubernetes.genmodel#//kubernetes/Deployment/replicas"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes visualID="2003" editPartClassName="ContainerEditPart" itemSemanticEditPolicyClassName="ContainerItemSemanticEditPolicy" canonicalEditPolicyClassName="ContainerCanonicalEditPolicy" graphicalNodeEditPolicyClassName="ContainerGraphicalNodeEditPolicy" createCommandClassName="ContainerCreateCommand">
-      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType xsi:type="gmfgen:SpecializationType" metamodelType="//@diagram/@childNodes.0/@elementType"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ContainerFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainerFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainerFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/MDMG-kubernetes-editor/icons/container.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
-      <modelFacet>
-        <metaClass href="kubernetes.genmodel#//kubernetes/Container"/>
-        <containmentMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/conts"/>
-        <childMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/conts"/>
-      </modelFacet>
-      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5004" editPartClassName="ContainerNameEditPart" itemSemanticEditPolicyClassName="ContainerNameItemSemanticEditPolicy">
-        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ContainerLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainerLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainerLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Container&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="CONTAINER:{0}" editorPattern="CONTAINER:{0}" editPattern="CONTAINER:{0}">
-          <metaFeatures href="kubernetes.genmodel#//kubernetes/Container/name"/>
-        </modelFacet>
-      </labels>
-    </topLevelNodes>
-    <topLevelNodes visualID="2004" editPartClassName="EnvironmentEditPart" itemSemanticEditPolicyClassName="EnvironmentItemSemanticEditPolicy" canonicalEditPolicyClassName="EnvironmentCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EnvironmentGraphicalNodeEditPolicy" createCommandClassName="EnvironmentCreateCommand">
+    <topLevelNodes visualID="2003" editPartClassName="EnvironmentEditPart" itemSemanticEditPolicyClassName="EnvironmentItemSemanticEditPolicy" canonicalEditPolicyClassName="EnvironmentCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EnvironmentGraphicalNodeEditPolicy" createCommandClassName="EnvironmentCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EnvironmentEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EnvironmentFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EnvironmentFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EnvironmentFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/MDMG-kubernetes-editor/icons/environment-var.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
@@ -85,7 +68,7 @@
         <containmentMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/envs"/>
         <childMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/envs"/>
       </modelFacet>
-      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5005" editPartClassName="EnvironmentNameValueEditPart" itemSemanticEditPolicyClassName="EnvironmentNameValueItemSemanticEditPolicy">
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5004" editPartClassName="EnvironmentNameValueEditPart" itemSemanticEditPolicyClassName="EnvironmentNameValueItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EnvironmentLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EnvironmentLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EnvironmentLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Environment&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0}:{1}" editorPattern="{0}:{1}" editPattern="{0}:{1}">
@@ -94,7 +77,7 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes visualID="2005" editPartClassName="LabelEditPart" itemSemanticEditPolicyClassName="LabelItemSemanticEditPolicy" canonicalEditPolicyClassName="LabelCanonicalEditPolicy" graphicalNodeEditPolicyClassName="LabelGraphicalNodeEditPolicy" createCommandClassName="LabelCreateCommand">
+    <topLevelNodes visualID="2004" editPartClassName="LabelEditPart" itemSemanticEditPolicyClassName="LabelItemSemanticEditPolicy" canonicalEditPolicyClassName="LabelCanonicalEditPolicy" graphicalNodeEditPolicyClassName="LabelGraphicalNodeEditPolicy" createCommandClassName="LabelCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="LabelEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="LabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class LabelFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public LabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/MDMG-kubernetes-editor/icons/label.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
@@ -103,7 +86,7 @@
         <containmentMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/labs"/>
         <childMetaFeature href="kubernetes.genmodel#//kubernetes/Kubernetes/labs"/>
       </modelFacet>
-      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5006" editPartClassName="LabelKeyValueEditPart" itemSemanticEditPolicyClassName="LabelKeyValueItemSemanticEditPolicy">
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5005" editPartClassName="LabelKeyValueEditPart" itemSemanticEditPolicyClassName="LabelKeyValueItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:InnerClassViewmap" className="LabelLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class LabelLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public LabelLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Label&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0}:{1}" editorPattern="{0}:{1}" editPattern="{0}:{1}">
@@ -112,12 +95,12 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <links visualID="4001" editPartClassName="ServiceDeploymentsEditPart" itemSemanticEditPolicyClassName="ServiceDeploymentsItemSemanticEditPolicy" createCommandClassName="ServiceDeploymentsCreateCommand" reorientCommandClassName="ServiceDeploymentsReorientCommand">
+    <links visualID="4001" editPartClassName="ServiceDeploymentEditPart" itemSemanticEditPolicyClassName="ServiceDeploymentItemSemanticEditPolicy" createCommandClassName="ServiceDeploymentCreateCommand" reorientCommandClassName="ServiceDeploymentReorientCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType xsi:type="gmfgen:SpecializationType"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ServiceDeploymentsFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ServiceDeploymentsFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ServiceDeploymentsFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ServiceDeploymentFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ServiceDeploymentFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ServiceDeploymentFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature href="kubernetes.genmodel#//kubernetes/Service/deployments"/>
+        <metaFeature href="kubernetes.genmodel#//kubernetes/Service/deployment"/>
       </modelFacet>
       <labels visualID="6001" editPartClassName="WrappingLabelEditPart" itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy" readOnly="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -163,14 +146,14 @@
     </compartments>
     <palette>
       <groups title="Objects" collapse="true">
-        <entries xsi:type="gmfgen:ToolEntry" title="Container" description="container" genNodes="//@diagram/@childNodes.0 //@diagram/@topLevelNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Container" description="container" genNodes="//@diagram/@childNodes.0"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Deployment" description="deployment icon" genNodes="//@diagram/@topLevelNodes.1"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Environment" description="environment" genNodes="//@diagram/@topLevelNodes.3"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Label" description="label" genNodes="//@diagram/@topLevelNodes.4"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Environment" description="environment" genNodes="//@diagram/@topLevelNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Label" description="label" genNodes="//@diagram/@topLevelNodes.3"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Service" description="service" genNodes="//@diagram/@topLevelNodes.0"/>
       </groups>
       <groups title="Connections" collapse="true">
-        <entries xsi:type="gmfgen:ToolEntry" title="Deployments" description="Create new Deployments" genLinks="//@diagram/@links.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Deployment" description="Create new Deployment" genLinks="//@diagram/@links.0"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Environments" description="Create new Environments" genLinks="//@diagram/@links.2"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Labels" description="Create new Labels" genLinks="//@diagram/@links.1"/>
       </groups>
@@ -196,22 +179,19 @@
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.2"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.3"/>
-    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.4"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.1" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.4" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@topLevelNodes.4" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.3" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.3" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.2" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.3" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@topLevelNodes.3" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.2" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.2" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.2" child="//@diagram/@childNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
   </navigator>
@@ -229,7 +209,7 @@
   </propertySheet>
   <domainGenModel href="kubernetes.genmodel#/"/>
   <labelParsers extensibleViaService="true">
-    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet"/>
     <implementations xsi:type="gmfgen:ExternalParser" uses="//@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">

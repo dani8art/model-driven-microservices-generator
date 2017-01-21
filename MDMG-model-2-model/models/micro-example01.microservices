@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cloud:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cloud="http://cloud.microservices">
+  <microservices name="MongoDB" port="27017" image="mongo" imagePort="27017" toConnection="//@connections.0"/>
+  <groups name="Backend">
+    <microservices name="Pets" port="80" image="darteaga/pets:sma-example" imagePort="80" fromConnection="//@connections.0"/>
+  </groups>
+  <connections fromMicroservice="//@groups.0/@microservices.0" toMicroservice="//@microservices.0"/>
+</cloud:Application>

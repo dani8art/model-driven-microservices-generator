@@ -4,3 +4,69 @@
 module micro2kube;
 create OUTkube : MMkube from INmicro : MMmicro;
 
+rule app2kubernetes {
+	from
+		APP : MMmicro!Application
+	to 
+	
+		ROOT: MMkube!Kubernetes (
+			name <- APP.name,
+			cloud <- 'LOCAL',
+			
+			services <- MMmicro!Microservice.allInstances() -> collect(microInstance |
+					thisModule.micro2serviceRule(microInstance)),
+					
+			deps <- MMkube!Deployment.allInstances(),
+					
+			labs <- MMkube!Label.allInstances(),
+			
+			envs <- MMkube!Environment.allInstances()
+			
+		),
+		
+		environment: MMkube!Environment (
+			name <- 'NODE_ENV',
+			value <- 'development'
+		)
+} 
+
+lazy rule micro2serviceRule {
+	from
+		micro : MMmicro!Microservice
+	to
+	 	service : MMkube!Service (
+	 		
+			name <- micro.name,
+			
+			deployment <- thisModule.micro2deploymentRule(micro)
+		)
+}
+
+lazy rule micro2deploymentRule {
+	from
+		micro : MMmicro!Microservice
+	to
+	 	deployment : MMkube!Deployment (
+			replicas <- 1,
+			
+			labels <-  Set {label},			
+			
+			containers <- thisModule.micro2containerRule(micro)
+		),
+		
+		label: MMkube!Label (
+			key <- 'name',
+			value <- micro.name
+		)
+}
+
+
+lazy rule micro2containerRule {
+	from
+		micro : MMmicro!Microservice
+	to
+	 	container : MMkube!Container (
+			name <- micro.name,
+			environments <- MMkube!Environment.allInstances()
+		)
+}

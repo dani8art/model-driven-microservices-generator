@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cloud:Kubernetes xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cloud="http://cloud.kubernetes">
+  <services deployment="//@deps.0" name="MongoDB"/>
+  <services deployment="//@deps.1" name="Pets"/>
+  <deps replicas="1" labels="//@labs.0">
+    <containers name="MongoDB" environments="//@envs.0"/>
+  </deps>
+  <deps replicas="1" labels="//@labs.1">
+    <containers name="Pets" environments="//@envs.0"/>
+  </deps>
+  <envs name="NODE_ENV" value="development"/>
+  <labs key="name" value="MongoDB"/>
+  <labs key="name" value="Pets"/>
+</cloud:Kubernetes>

@@ -62,8 +62,8 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Deployments"
-          description="Create new Deployments">
+          title="Deployment"
+          description="Create new Deployment">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

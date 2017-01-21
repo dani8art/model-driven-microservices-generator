@@ -7,22 +7,22 @@ package kubernetes;
 class Service {
 
   @gmf.link(target.decoration="arrow", style="dash")
-  ref Deployment[1] deployments;
+  ref Deployment[1] deployment;
   attr String[1] name;
   attr int port;
   attr int targetPort;
   attr ServiceType type;
 }
 
-@gmf.node(label="replies", label.icon="false", label.pattern="DEPLOYMENT:{0}", figure="rounded", tool.name="Deployment", tool.description="deployment icon")
-@Ecore(constraints="RepliesNumber sameNameLabels sameContainerName sameContainerPort")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(RepliesNumber="
-			replies>0", sameNameLabels="
+@gmf.node(label="replicas", label.icon="false", label.pattern="DEPLOYMENT:{0}", figure="rounded", tool.name="Deployment", tool.description="deployment icon")
+@Ecore(constraints="ReplicasNumber sameNameLabels sameContainerName sameContainerPort")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(ReplicasNumber="
+			replicas>0", sameNameLabels="
 			labels -> isUnique(key)", sameContainerName="
 			containers -> isUnique(name)", sameContainerPort="
 			containers -> isUnique(containerPort)")
 class Deployment {
-  attr int replies;
+  attr int replicas;
 
   @gmf.link(target.decoration="arrow", style="dash")
   ref Label[+] labels;
@@ -31,7 +31,7 @@ class Deployment {
   val Container[*] containers;
 }
 
-@gmf.node(label="name", label.icon="false",  label.pattern="CONTAINER:{0}",  label.placement="external", svg.uri="platform:/plugin/MDMG-kubernetes-editor/icons/container.svg", figure="svg", tool.name="Container", tool.description="container")
+@gmf.node(label="name", label.icon="false", label.pattern="CONTAINER:{0}", label.placement="external", svg.uri="platform:/plugin/MDMG-kubernetes-editor/icons/container.svg", figure="svg", tool.name="Container", tool.description="container")
 @Ecore(constraints="sameNameEnvironment")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(sameNameEnvironment="
 			environments -> isUnique(name)")
@@ -60,9 +60,9 @@ class Kubernetes {
   val Service[*] services;
   attr CloudType cloud;
   val Deployment[*] deps;
-  val Container[*] conts;
   val Environment[*] envs;
   val Label[*] labs;
+  attr String name;
 }
 
 enum ServiceType {

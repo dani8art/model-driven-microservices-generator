@@ -75,6 +75,10 @@
         <element xmi:type="ecore:EAttribute" href="kubernetes.ecore#//Kubernetes/cloud"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_pAp5wcOsEeaipZmYRsEixw"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_1613YN97EeaKgtf7MkKUhw" type="3001">
+        <element xmi:type="ecore:EAttribute" href="kubernetes.ecore#//Kubernetes/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1613Yd97EeaKgtf7MkKUhw"/>
+      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_LUiPJMOsEeaipZmYRsEixw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_LUiPJcOsEeaipZmYRsEixw"/>
     </children>
@@ -153,6 +157,15 @@
     <element xmi:type="ecore:EEnum" href="kubernetes.ecore#//CloudType"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SqUw8cOsEeaipZmYRsEixw" x="627" y="100"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_0hBkwN97EeaKgtf7MkKUhw" type="2003" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_0hBkwt97EeaKgtf7MkKUhw" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_0hBkw997EeaKgtf7MkKUhw" type="7009">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_0hBkxN97EeaKgtf7MkKUhw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_0hBkxd97EeaKgtf7MkKUhw"/>
+    </children>
+    <element xmi:type="ecore:EAnnotation" href="kubernetes.ecore#//%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FEcore%"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0hBkwd97EeaKgtf7MkKUhw" x="615" y="240"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_acq3QbJmEeau-4lroaDGLQ"/>
   <element xmi:type="ecore:EPackage" href="kubernetes.ecore#/"/>
   <edges xmi:type="notation:Connector" xmi:id="_LVAwQMOsEeaipZmYRsEixw" type="4002" source="_LUgZ8MOsEeaipZmYRsEixw" target="_LUhBCsOsEeaipZmYRsEixw">
@@ -163,7 +176,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_LVBXU8OsEeaipZmYRsEixw" x="9" y="-17"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_LVAwQcOsEeaipZmYRsEixw" fontName="Segoe UI"/>
-    <element xmi:type="ecore:EReference" href="kubernetes.ecore#//Service/deployments"/>
+    <element xmi:type="ecore:EReference" href="kubernetes.ecore#//Service/deployment"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LVAwQsOsEeaipZmYRsEixw" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LVvwE8OsEeaipZmYRsEixw" id="(0.5,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LVvwFMOsEeaipZmYRsEixw" id="(0.494949494949495,0.0)"/>
@@ -217,19 +230,6 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_rkS7McOsEeaipZmYRsEixw" fontName="Segoe UI"/>
     <element xmi:type="ecore:EReference" href="kubernetes.ecore#//Kubernetes/deps"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rkS7MsOsEeaipZmYRsEixw" points="[15, 30, 39, -276]$[87, 171, 111, -135]$[0, 277, 24, -29]"/>
-  </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_xTlZQMOsEeaipZmYRsEixw" type="4003" source="_LUiPIMOsEeaipZmYRsEixw" target="_LUhoEMOsEeaipZmYRsEixw">
-    <children xmi:type="notation:DecorationNode" xmi:id="_xTmAUMOsEeaipZmYRsEixw" type="6002">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_xTmAUcOsEeaipZmYRsEixw" x="-144" y="20"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_xTmAUsOsEeaipZmYRsEixw" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_xTmAU8OsEeaipZmYRsEixw" x="20" y="22"/>
-    </children>
-    <styles xmi:type="notation:FontStyle" xmi:id="_xTlZQcOsEeaipZmYRsEixw" fontName="Segoe UI"/>
-    <element xmi:type="ecore:EReference" href="kubernetes.ecore#//Kubernetes/conts"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xTlZQsOsEeaipZmYRsEixw" points="[-4, 4, 87, -412]$[-64, 66, 27, -350]$[-89, 385, 2, -31]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xTpDoMOsEeaipZmYRsEixw" id="(0.031746031746031744,0.6779661016949152)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xTpDocOsEeaipZmYRsEixw" id="(0.1297709923664122,0.34065934065934067)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_0mLLYMOsEeaipZmYRsEixw" type="4003" source="_LUiPIMOsEeaipZmYRsEixw" target="_LUi2MMOsEeaipZmYRsEixw">
     <children xmi:type="notation:DecorationNode" xmi:id="_0mLycMOsEeaipZmYRsEixw" type="6002">

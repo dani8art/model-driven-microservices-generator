@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="kubernetes">
   <figures name="Default">
-    <figures xsi:type="gmfgraph:PolylineDecoration" name="ServiceDeploymentsFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ServiceDeploymentFigureTargetDecoration"/>
     <figures xsi:type="gmfgraph:PolylineDecoration" name="DeploymentLabelsFigureTargetDecoration"/>
     <figures xsi:type="gmfgraph:PolylineDecoration" name="ContainerEnvironmentsFigureTargetDecoration"/>
     <descriptors name="ServiceFigure">
@@ -57,11 +57,11 @@
     <descriptors name="EnvironmentLabelFigure">
       <actualFigure xsi:type="gmfgraph:Label" name="EnvironmentLabelFigure" text="Environment"/>
     </descriptors>
-    <descriptors name="ServiceDeploymentsFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ServiceDeploymentsFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.0"/>
+    <descriptors name="ServiceDeploymentFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ServiceDeploymentFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.0"/>
     </descriptors>
-    <descriptors name="ServiceDeploymentsExternalLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="ServiceDeploymentsExternalLabel"/>
+    <descriptors name="ServiceDeploymentExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ServiceDeploymentExternalLabel"/>
     </descriptors>
     <descriptors name="DeploymentLabelsFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="DeploymentLabelsFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.1"/>
@@ -81,7 +81,7 @@
   <nodes name="Container" figure="ContainerFigure"/>
   <nodes name="Label" figure="LabelFigure"/>
   <nodes name="Environment" figure="EnvironmentFigure"/>
-  <connections name="ServiceDeployments" figure="ServiceDeploymentsFigure"/>
+  <connections name="ServiceDeployment" figure="ServiceDeploymentFigure"/>
   <connections name="DeploymentLabels" figure="DeploymentLabelsFigure"/>
   <connections name="ContainerEnvironments" figure="ContainerEnvironmentsFigure"/>
   <compartments name="DeploymentContainersCompartment" figure="DeploymentFigure" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
@@ -90,7 +90,7 @@
   <labels name="ContainerLabel" figure="ContainerLabelFigure" elementIcon="false"/>
   <labels name="LabelLabel" figure="LabelLabelFigure" elementIcon="false"/>
   <labels name="EnvironmentLabel" figure="EnvironmentLabelFigure" elementIcon="false"/>
-  <labels name="ServiceDeploymentsExternalLabel" figure="ServiceDeploymentsExternalLabelFigure" elementIcon="false"/>
+  <labels name="ServiceDeploymentExternalLabel" figure="ServiceDeploymentExternalLabelFigure" elementIcon="false"/>
   <labels name="DeploymentLabelsExternalLabel" figure="DeploymentLabelsExternalLabelFigure" elementIcon="false"/>
   <labels name="ContainerEnvironmentsExternalLabel" figure="ContainerEnvironmentsExternalLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

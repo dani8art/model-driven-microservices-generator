@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="microservices">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ConnectionFigureTargetDecoration"/>
+    <descriptors name="MicroserviceFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="MicroserviceFigure" documentURI="platform:/plugin/MDMG-microservices-editor/icons/microservice.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="MicroserviceLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="MicroserviceLabelFigure" text="Microservice"/>
+    </descriptors>
+    <descriptors name="GroupFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="GroupFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="GroupLabelFigure" text="Group">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="GroupMicroservicesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureGroupLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors accessor="getGroupMicroservicesCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="ConnectionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ConnectionFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+  </figures>
+  <nodes name="Microservice" figure="MicroserviceFigure"/>
+  <nodes name="Group" figure="GroupFigure"/>
+  <connections name="Connection" figure="ConnectionFigure"/>
+  <compartments name="GroupMicroservicesCompartment" figure="GroupFigure" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels name="MicroserviceLabel" figure="MicroserviceLabelFigure" elementIcon="false"/>
+  <labels name="GroupLabel" figure="GroupFigure" elementIcon="false" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+</gmfgraph:Canvas>

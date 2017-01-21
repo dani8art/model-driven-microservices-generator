@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/MDMG-microservices-editor/src"
+    modelPluginID="MDMG-microservices-editor" modelName="Microservices" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>microservices.emf</foreignModel>
+  <genPackages prefix="Microservices" disposableProviderFactory="true" ecorePackage="microservices.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="microservices.ecore#//ConnectionType">
+      <genEnumLiterals ecoreEnumLiteral="microservices.ecore#//ConnectionType/INTERNAL"/>
+      <genEnumLiterals ecoreEnumLiteral="microservices.ecore#//ConnectionType/EXTERNAL"/>
+    </genEnums>
+    <genClasses ecoreClass="microservices.ecore#//Application">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference microservices.ecore#//Application/microservices"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference microservices.ecore#//Application/groups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference microservices.ecore#//Application/connections"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute microservices.ecore#//Application/name"/>
+    </genClasses>
+    <genClasses ecoreClass="microservices.ecore#//Microservice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute microservices.ecore#//Microservice/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute microservices.ecore#//Microservice/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute microservices.ecore#//Microservice/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute microservices.ecore#//Microservice/imagePort"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference microservices.ecore#//Microservice/group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference microservices.ecore#//Microservice/fromConnection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference microservices.ecore#//Microservice/toConnection"/>
+    </genClasses>
+    <genClasses ecoreClass="microservices.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute microservices.ecore#//Connection/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference microservices.ecore#//Connection/fromMicroservice"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference microservices.ecore#//Connection/toMicroservice"/>
+    </genClasses>
+    <genClasses ecoreClass="microservices.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute microservices.ecore#//Group/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference microservices.ecore#//Group/microservices"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

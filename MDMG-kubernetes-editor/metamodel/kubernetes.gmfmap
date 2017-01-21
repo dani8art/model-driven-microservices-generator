@@ -44,7 +44,7 @@
         <diagramLabel
             href="kubernetes.gmfgraph#DeploymentLabel"/>
         <features
-            href="kubernetes.ecore#//Deployment/replies"/>
+            href="kubernetes.ecore#//Deployment/replicas"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -52,39 +52,34 @@
       <diagramNode
           href="kubernetes.gmfgraph#Deployment"/>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.2/@ownedChild">
+          compartment="//@nodes.1/@ownedChild/@compartments.0">
         <containmentFeature
             href="kubernetes.ecore#//Deployment/containers"/>
+        <ownedChild>
+          <domainMetaElement
+              href="kubernetes.ecore#//Container"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="CONTAINER:{0}"
+              editorPattern="CONTAINER:{0}"
+              editPattern="CONTAINER:{0}">
+            <diagramLabel
+                href="kubernetes.gmfgraph#ContainerLabel"/>
+            <features
+                href="kubernetes.ecore#//Container/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="kubernetes.gmftool#//@palette/@tools.0/@tools.0"/>
+          <diagramNode
+              href="kubernetes.gmfgraph#Container"/>
+        </ownedChild>
       </children>
       <compartments
           children="//@nodes.1/@ownedChild/@children.0">
         <compartment
             href="kubernetes.gmfgraph#DeploymentContainersCompartment"/>
       </compartments>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="kubernetes.ecore#//Kubernetes/conts"/>
-    <ownedChild>
-      <domainMetaElement
-          href="kubernetes.ecore#//Container"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping"
-          viewPattern="CONTAINER:{0}"
-          editorPattern="CONTAINER:{0}"
-          editPattern="CONTAINER:{0}">
-        <diagramLabel
-            href="kubernetes.gmfgraph#ContainerLabel"/>
-        <features
-            href="kubernetes.ecore#//Container/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="kubernetes.gmftool#//@palette/@tools.0/@tools.0"/>
-      <diagramNode
-          href="kubernetes.gmfgraph#Container"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -142,16 +137,16 @@
         xsi:type="gmfmap:DesignLabelMapping"
         readOnly="true">
       <diagramLabel
-          href="kubernetes.gmfgraph#ServiceDeploymentsExternalLabel"/>
+          href="kubernetes.gmfgraph#ServiceDeploymentExternalLabel"/>
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
         href="kubernetes.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="kubernetes.gmfgraph#ServiceDeployments"/>
+        href="kubernetes.gmfgraph#ServiceDeployment"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="kubernetes.ecore#//Service/deployments"/>
+        href="kubernetes.ecore#//Service/deployment"/>
   </links>
   <links>
     <labelMappings
