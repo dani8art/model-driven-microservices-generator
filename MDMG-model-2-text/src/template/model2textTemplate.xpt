@@ -52,7 +52,7 @@ spec:
         «FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
           value: «env.value»
           «ENDFOREACH»
-   	      «ENDIF»
+          «ENDIF»
       «ENDFOREACH»
       «ENDIF»
 «ENDFILE»
@@ -96,7 +96,7 @@ kind: Service
 metadata:
   name: «this.name»
   labels:
-  «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»name: «lab.key»«ENDFOREACH»  
+    «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»«lab.key»: «lab.value»«ENDFOREACH»  
 spec:
   type: «this.type»
   ports:
