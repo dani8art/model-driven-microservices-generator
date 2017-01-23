@@ -38,7 +38,13 @@ lazy rule micro2serviceRule {
 	 		
 			name <- micro.name,
 			
-			deployment <- thisModule.micro2deploymentRule(micro)
+			deployment <- thisModule.micro2deploymentRule(micro),
+			
+			port <- micro.port,
+			
+			targetPort <- micro.imagePort,
+			
+			type <- #NodePort
 		)
 }
 
@@ -67,6 +73,11 @@ lazy rule micro2containerRule {
 	to
 	 	container : MMkube!Container (
 			name <- micro.name,
-			environments <- MMkube!Environment.allInstances()
+			
+			environments <- MMkube!Environment.allInstances(),
+			
+			image <- micro.image,
+			
+			containerPort <- micro.imagePort
 		)
 }
