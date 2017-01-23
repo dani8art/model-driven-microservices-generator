@@ -54,7 +54,7 @@ spec:
           «ENDFOREACH»
    	      «ENDIF»
       «ENDFOREACH»
-      «ENDIF»        
+      «ENDIF»
 «ENDFILE»
 «ENDDEFINE»
 
