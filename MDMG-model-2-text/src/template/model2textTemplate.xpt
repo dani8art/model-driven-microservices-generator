@@ -1,11 +1,19 @@
 «IMPORT kubernetes»
 
 «DEFINE main FOR kubernetes::Kubernetes»
+«FILE 'deploy.sh'»#! /bin/bash
+«FOREACH this.services AS ser SEPARATOR '\n'»bash ./«ser.name»/create-«ser.name».sh«ENDFOREACH»
+«ENDFILE»
+
+«FILE 'deploy.bat'»«FOREACH this.services AS ser SEPARATOR '\n'»bash ./«ser.name»/create-«ser.name».sh«ENDFOREACH»
+«ENDFILE»
+
 «EXPAND deploymentFileTemplate FOREACH services»
 «EXPAND createFiles FOREACH services»
 «EXPAND replicationFileTemplate FOREACH services»
 «EXPAND serviceFileTemplate FOREACH services»
 «ENDDEFINE»
+
 
 «DEFINE createFiles FOR Service»
 «FILE this.name+'/create-'+this.name+".bat"»
@@ -90,14 +98,14 @@ metadata:
   labels:
   «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»name: «lab.key»«ENDFOREACH»  
 spec:
-      type: «this.type»
-      ports:
-	      - port: «this.port»
-	        targetPort: «this.targetPort»
-	        nodePort: «this.port»
-	        protocol: TCP
-	  selector:
-	  	name: «this.name»     
+  type: «this.type»
+    ports:
+	  - port: «this.port»
+	    targetPort: «this.targetPort»
+	    nodePort: «this.port»
+	    protocol: TCP
+    selector:
+	  name: «this.name»     
 «ENDFILE»
 «ENDDEFINE»
 

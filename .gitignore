@@ -74,8 +74,10 @@ hs_err_pid*
 
 ### Personal ###
 
-src-gen/
-src/
+MDMG-microservices-editor/src/*
+MDMG-kubernetes-editor/src/*
+MetaServicio.diagram/src/*
+MetaServicio.diagram/src-gen/*
 bower_components/
 node_modules/
 .kube/
