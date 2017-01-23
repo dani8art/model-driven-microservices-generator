@@ -1,0 +1,8 @@
+«IMPORT kubernetes»
+«EXTENSION templates::kubernetesExtension»
+
+«DEFINE main FOR Kubernetes»
+«FILE nombreFile(this)»
+	wirte here code
+«ENDFILE»
+«ENDDEFINE»

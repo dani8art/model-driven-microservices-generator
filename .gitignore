@@ -76,8 +76,6 @@ hs_err_pid*
 
 MDMG-microservices-editor/src/*
 MDMG-kubernetes-editor/src/*
-MetaServicio.diagram/src/*
-MetaServicio.diagram/src-gen/*
 bower_components/
 node_modules/
 .kube/
@@ -86,3 +84,5 @@ npm-debug*
 data/
 MDMG-kubernetes-editor.diagram/
 MDMG-microservices-editor.diagram/
+MDMG-model-2-text/src-gen/MongoDB/MongoDB-deployment.yaml
+MDMG-model-2-text/src-gen/
