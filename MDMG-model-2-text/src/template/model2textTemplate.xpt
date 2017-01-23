@@ -5,7 +5,7 @@
 «FOREACH this.services AS ser SEPARATOR '\n'»bash ./«ser.name»/create-«ser.name».sh«ENDFOREACH»
 «ENDFILE»
 
-«FILE 'deploy.bat'»«FOREACH this.services AS ser SEPARATOR '\n'»call ./«ser.name»/create-«ser.name».sh«ENDFOREACH»
+«FILE 'deploy.bat'»«FOREACH this.services AS ser SEPARATOR '\n'»call ./«ser.name»/create-«ser.name».bat«ENDFOREACH»
 «ENDFILE»
 
 «EXPAND deploymentFileTemplate FOREACH services»
@@ -52,7 +52,7 @@ spec:
         «FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
           value: «env.value»
           «ENDFOREACH»
-   		  «ENDIF»
+   	      «ENDIF»
       «ENDFOREACH»
       «ENDIF»        
 «ENDFILE»
@@ -99,13 +99,13 @@ metadata:
   «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»name: «lab.key»«ENDFOREACH»  
 spec:
   type: «this.type»
-    ports:
-      - port: «this.port»
-        targetPort: «this.targetPort»
-        nodePort: «this.port»
-        protocol: TCP
-    selector:
-      name: «this.name»     
+  ports:
+    - port: «this.port»
+      targetPort: «this.targetPort»
+      nodePort: «this.port»
+      protocol: TCP
+  selector:
+    name: «this.name»     
 «ENDFILE»
 «ENDDEFINE»
 
