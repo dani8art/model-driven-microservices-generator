@@ -5,7 +5,7 @@
 «FOREACH this.services AS ser SEPARATOR '\n'»bash ./«ser.name»/create-«ser.name».sh«ENDFOREACH»
 «ENDFILE»
 
-«FILE 'deploy.bat'»«FOREACH this.services AS ser SEPARATOR '\n'»bash ./«ser.name»/create-«ser.name».sh«ENDFOREACH»
+«FILE 'deploy.bat'»«FOREACH this.services AS ser SEPARATOR '\n'»call ./«ser.name»/create-«ser.name».sh«ENDFOREACH»
 «ENDFILE»
 
 «EXPAND deploymentFileTemplate FOREACH services»
@@ -48,8 +48,8 @@ spec:
         ports:
         - name: «cont.name»
           containerPort: «cont.containerPort»
-      	«IF cont.environments.size!=0»env:
-      	«FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
+        «IF cont.environments.size!=0»env:
+        «FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
           value: «env.value»
           «ENDFOREACH»
    		  «ENDIF»
@@ -77,10 +77,10 @@ spec:
       - image: «cont.image»
         name: «cont.name»
         ports:
-	      - name: «cont.name»
-	        containerPort: «cont.containerPort»
-	 	«IF cont.environments.size!=0»env:
-      	«FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
+          - name: «cont.name»
+            containerPort: «cont.containerPort»
+        «IF cont.environments.size!=0»env:
+        «FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
           value: «env.value»
           «ENDFOREACH»
    		  «ENDIF»
@@ -100,12 +100,12 @@ metadata:
 spec:
   type: «this.type»
     ports:
-	  - port: «this.port»
-	    targetPort: «this.targetPort»
-	    nodePort: «this.port»
-	    protocol: TCP
+      - port: «this.port»
+        targetPort: «this.targetPort»
+        nodePort: «this.port»
+        protocol: TCP
     selector:
-	  name: «this.name»     
+      name: «this.name»     
 «ENDFILE»
 «ENDDEFINE»
 
