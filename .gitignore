@@ -86,3 +86,4 @@ MDMG-kubernetes-editor.diagram/
 MDMG-microservices-editor.diagram/
 MDMG-model-2-text/src-gen/MongoDB/MongoDB-deployment.yaml
 MDMG-model-2-text/src-gen/
+*.zip
