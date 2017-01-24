@@ -1,0 +1,5 @@
+import kubernetes;
+
+String toLowerCase(String e):
+	e.toLowerCase()
+;

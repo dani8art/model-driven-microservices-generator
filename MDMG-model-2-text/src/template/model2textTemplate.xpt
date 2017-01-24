@@ -1,4 +1,5 @@
 «IMPORT kubernetes»
+«EXTENSION template::kubernetesExtension»
 
 «DEFINE main FOR kubernetes::Kubernetes»
 «FILE 'deploy.sh'»#! /bin/bash
@@ -33,24 +34,24 @@ kubectl create -f ./«this.name»/«this.name»-service.yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: «this.name»
+  name: «toLowerCase(this.name)»
 spec:
   replicas: 1
   template: 
     metadata:
       labels:
-        «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»name: «lab.key»«ENDFOREACH»
+        «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»«lab.key»: «lab.value»«ENDFOREACH»
     spec:
       «IF this.deployment.containers.size!=0»containers:
       «FOREACH this.deployment.containers AS cont SEPARATOR '\n'»- image: «cont.image»
-        name: «cont.name»
+        name: «toLowerCase(cont.name)»
         imagePullPolicy: Always
         ports:
-        - name: «cont.name»
+        - name: «toLowerCase(cont.name)»
           containerPort: «cont.containerPort»
         «IF cont.environments.size!=0»env:
         «FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
-          value: «env.value»
+          value: '«env.value»'
           «ENDFOREACH»
           «ENDIF»
       «ENDFOREACH»
@@ -69,21 +70,21 @@ spec:
   template: 
     metadata:
       labels:
-        «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»name: «lab.key»«ENDFOREACH»
+        «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»«lab.key»: «lab.value»«ENDFOREACH»
     spec:
       «IF this.deployment.containers.size!=0»
       containers:
       «FOREACH this.deployment.containers AS cont SEPARATOR '\n'»
       - image: «cont.image»
-        name: «cont.name»
+        name: «toLowerCase(cont.name)»
         ports:
-          - name: «cont.name»
+          - name: «toLowerCase(cont.name)»
             containerPort: «cont.containerPort»
         «IF cont.environments.size!=0»env:
         «FOREACH cont.environments AS env SEPARATOR '\n'»- name: «env.name»
-          value: «env.value»
+          value: '«env.value»'
           «ENDFOREACH»
-   		  «ENDIF»
+          «ENDIF»
       «ENDFOREACH»
       «ENDIF»        
 «ENDFILE»
@@ -94,7 +95,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: «this.name»
+  name: «toLowerCase(this.name)»
   labels:
     «FOREACH this.deployment.labels AS lab SEPARATOR '\n'»«lab.key»: «lab.value»«ENDFOREACH»  
 spec:

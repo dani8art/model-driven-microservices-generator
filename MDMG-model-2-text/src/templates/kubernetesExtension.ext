@@ -1,5 +1,0 @@
-import kubernetes;
-
-String nombreFile(kubernetes::Kubernetes e):
-	'putNameHere' + '.sql'
-;
